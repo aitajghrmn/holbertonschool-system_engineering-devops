@@ -1,0 +1,27 @@
+             Internet / Users
+                     |
+                     v
+               Firewall 1
+                     |
+                     v
+           HAproxy Load Balancer (HTTPS)
+                     |
+                     v
+               Firewall 2
+           /                   \
+          v                     v
+      Server 1                 Server 2
+   -----------------        -----------------
+   | Nginx Web      |       | Nginx Web      |
+   | Application    |       | Application    |
+   | Application    |       | Application    |
+   | Files          |       | Files          |
+   | MySQL (Primary)|       | MySQL (Replica)|
+   | Monitoring     |       | Monitoring     |
+   -----------------        -----------------
+          \                     /
+           \                   /
+             Firewall 3
+                     |
+                     v
+                Monitoring Service

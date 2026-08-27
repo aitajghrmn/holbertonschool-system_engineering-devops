@@ -1,0 +1,19 @@
+              Internet / Users
+                    |
+                    v
+            HAproxy Load Balancer
+           (Round Robin / Least Connections)
+             /                   \
+            v                     v
+      Server 1                 Server 2
+   -----------------        -----------------
+   | Nginx Web      |       | Nginx Web      |
+   | Application    |       | Application    |
+   | Application    |       | Application    |
+   | Files          |       | Files          |
+   | MySQL (Primary)|       | MySQL (Replica)|
+   -----------------        -----------------
+            \                   /
+             \                 /
+              \               /
+           Replication / Sync

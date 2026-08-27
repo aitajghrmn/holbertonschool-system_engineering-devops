@@ -1,0 +1,20 @@
+İstifadəçi Brauzer
+        |
+        v
+www.foobar.com (DNS A record -> 8.8.8.8)
+        |
+        v
+        Server
+   ---------------------
+   | Nginx Web Server  | <-- HTTP/HTTPS sorğuları qəbul edir, statik faylları qaytarır,
+   |                   | dinamik sorğuları app server-ə göndərir
+   |-------------------|
+   | Application Server| <-- Kod bazasını icra edir, biznes məntiqi işləyir
+   |-------------------|
+   | Application Files | <-- Saytın kodları (HTML/PHP/JS və s.)
+   |-------------------|
+   | MySQL Database    | <-- Məlumatları saxlayır və sorğulara cavab verir
+   ---------------------
+        |
+        v
+  İstifadəçi Brauzer (HTML/CSS/JS)

@@ -1,0 +1,26 @@
+             Internet / Users
+                     |
+                     v
+           HAproxy Load Balancer Cluster
+            (LB1 + LB2 Active-Active)
+                     |
+                     v
+          -----------------------
+          |                     |
+          v                     v
+     Web Server 1           Web Server 2
+   -----------------       -----------------
+   | Nginx Web      |       | Nginx Web      |
+   | Monitoring     |       | Monitoring     |
+   -----------------       -----------------
+          |                     |
+          v                     v
+     App Server 1           App Server 2
+   -----------------       -----------------
+   | Application    |       | Application    |
+   | Files          |       | Files          |
+   -----------------       -----------------
+          |                     |
+          v                     v
+     Database 1 (Primary)    Database 2 (Replica)
+   -----------------       -----------------
